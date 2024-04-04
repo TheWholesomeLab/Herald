@@ -1,0 +1,29 @@
+# Logs
+herald.client/logs
+herald.client/*.log
+herald.client/npm-debug.log*
+herald.client/yarn-debug.log*
+herald.client/yarn-error.log*
+herald.client/pnpm-debug.log*
+herald.client/lerna-debug.log*
+
+herald.client/node_modules
+herald.client/dist
+herald.client/dist-ssr
+herald.client/*.local
+
+# Editor directories and files
+herald.client/.vscode/*
+herald.client/!.vscode/extensions.json
+herald.client/.idea
+herald.client/.DS_Store
+herald.client/*.suo
+herald.client/*.ntvs*
+herald.client/*.njsproj
+herald.client/*.sln
+herald.client/*.sw?
+
+*/obj
+*/bin
+*/.vscode
+.vs
