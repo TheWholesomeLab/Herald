@@ -91,7 +91,7 @@ Copy the following content into a JSON file and use this file to import the clie
 
 In the navigation bar, go to "Users" and create your first user. Once done, go to the "Credentials" tab of this user to set their default password.
 
-## Installing Herald
+# Installing Herald
 
 Clone this repository somewhere on your computer.
 
@@ -106,3 +106,16 @@ where xxxx will be the port used to connect to the client and yyyy the port used
 ## Note
 
 There is also a Dockerfile in the Herald.Server folder. This Dockerfile is not meant to be used for building the app manually, but for development purposes with Visual Studio.
+
+# Herald Development
+
+Herald uses Vite+React as a front-end and ASP.NET Core as a backend.
+You'll need Visual Studio with .NET 8.0 support in order to build and run the development code of Herald.
+
+Simply start the .sln file with Visual Studio. Right click the solution and go to properties. Select Herald.Server as your starting project.
+
+To run Herald, you need to run the Herald.Server project using the HTTPS profile as shown in the screenshot below.
+
+This whill automatically start the development server as well as the back-end API.
+
+![](/assets/herald_config.png)
