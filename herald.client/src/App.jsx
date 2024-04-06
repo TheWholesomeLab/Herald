@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <h1 id="tabelLabel">HERALD</h1>
-      <p>Connected as {keycloak && keycloak.idTokenParsed.given_name}</p>
+      <p>Connected as {keycloak && keycloak.idTokenParsed.given_name} {keycloak && keycloak.idTokenParsed.family_name}</p>
     </div>
   );
 }

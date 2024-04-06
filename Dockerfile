@@ -29,5 +29,6 @@ RUN dotnet publish "./Herald.Server.csproj" -c $BUILD_CONFIGURATION -o /app/publ
 
 FROM base AS final
 WORKDIR /app
+RUN mkdir data
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Herald.Server.dll"]

@@ -12,7 +12,6 @@ RUN apt-get install curl
 RUN curl -sL https://deb.nodesource.com/setup_20.x | bash
 RUN apt-get -y install nodejs
 
-
 FROM with-node AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
@@ -29,5 +28,6 @@ RUN dotnet publish "./Herald.Server.csproj" -c $BUILD_CONFIGURATION -o /app/publ
 
 FROM base AS final
 WORKDIR /app
+RUN mkdir data
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Herald.Server.dll"]
